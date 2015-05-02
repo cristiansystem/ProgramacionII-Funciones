@@ -1,0 +1,31 @@
+
+package javaapplication1;
+import java.util.*;
+
+public class CalcularArea {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int lado1;
+        int lado2;
+        int area;
+        Scanner lector=new Scanner(System.in);
+        System.out.println("Digite el lado 1: ");
+        lado1 = lector.nextInt();
+        System.out.println("Digete el lado 2: ");
+        lado2 = lector.nextInt();
+        //Para llamar funcion la nombro y le ingreso parametros que se necesita
+        area = CalcularAreaRec(lado1,lado2);
+        System.out.println("El area es: "+area);
+    }
+    //Se crea la funcion CalcularAreaRec 
+    //Lo unico importante en los parametros es que concidan la cantidad
+    public static Integer CalcularAreaRec(Integer l1,Integer l2){
+        int areaRec;
+        areaRec=l1*l2;
+        return areaRec;
+    }
+    
+}
