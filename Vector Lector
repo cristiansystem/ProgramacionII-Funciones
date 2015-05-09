@@ -1,0 +1,25 @@
+package edad.vector;
+import java.util.*;
+public class EdadVector {
+
+    public static void main(String[] args) {
+        int[] edades = new int[5];
+        int cont = 0;
+        Scanner lector = new Scanner(System.in);
+        
+        while(cont < 5)
+        {
+            System.out.println("Digite la edad");
+            edades[cont] = lector.nextInt();
+            cont = cont + 1;
+        }
+        cont =0;
+        
+        while(cont <5)
+        {
+            System.out.println(edades[cont]+",");
+            cont = cont + 1;
+        }
+    }
+    
+}
