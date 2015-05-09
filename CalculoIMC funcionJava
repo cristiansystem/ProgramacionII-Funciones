@@ -17,6 +17,7 @@ public class CalculoIMC {
         System.out.println("Digite el peso");
         peso = lector.nextDouble();
         IMC = CalcularIMC(peso,altura);
+        System.out.println(IMC);
         determinarEstado(IMC);
         
     }
