@@ -1,0 +1,239 @@
+ /*pedir al usuario 10 letras, estas letras se guardan en un vector, despues decir al 
+        usuario cuales de las letras con (a)*/
+
+package calculadora.de.letras;
+import java.util.*;
+
+public class CalculadoraDeLetras {
+
+    
+    public static void main(String[] args) {
+        String[] letra = new String[10];
+        Scanner lector = new Scanner(System.in);
+        Integer cantidad = 0;
+        
+        for(int n=0; n<10; n++)
+        {
+            System.out.println("Digite letra");
+            letra[n] = lector.next();
+            
+            if(letra[n].compareTo("a")==0){
+                cantidad = cantidad + 1;
+            }
+        }
+        System.out.println("Usted digito = "+cantidad+" (a)");
+    }
+    
+}
+
+
+
+******s*das*s*ds*d
+
+ /*pedir al usuario 10 letras, estas letras se guardan en un vector, despues decir al 
+        usuario cuales de las letras con (a)*/
+
+package calculadora.de.letras.funcion;
+import java.util.*;
+
+public class CalculadoraDeLetrasFuncion {
+
+    
+    public static void main(String[] args) 
+    {
+        String[] letra = new String[10];
+        Scanner lector = new Scanner(System.in);
+        
+        
+         for(int n=0; n<10; n++)
+        {
+            System.out.println("Digite letra");
+            letra[n] = lector.next();
+        }
+        comparador(letra);
+        
+    }
+    public static void comparador(String[] letra)
+    {
+        Integer cont = 0;
+        for(int m=0;m<10;m++)
+        {
+            if(letra[m].compareTo("a")==0)
+            {
+                cont = cont + 1;
+            }
+        }
+        System.out.println("Hay "+cont+" (a)");
+    }
+}
+    --------------------------
+    package convertidor.moneda;
+import java.util.*;
+public class ConvertidorMoneda {
+
+    
+    public static void main(String[] args) {
+        Double pesos;
+        Double dolares;
+        Double euros;
+        int opcion;
+        Scanner tecla = new Scanner(System.in);
+        
+        System.out.println("Ingrese la cantidad en pesos");
+        pesos = tecla.nextDouble();
+        System.out.println("- Presione (1) si desea convertir en dolares");
+        System.out.println("- Presione (2) si desea convertir en euros");
+        opcion = tecla.nextInt();
+        dolares = dolarconvertido(pesos);
+        euros = euroconvertido(pesos);
+        
+        if(opcion == 1)
+        {
+            System.out.println(pesos+"="+dolares);
+        }
+        if(opcion == 2)
+        {
+            System.out.println(pesos+"="+euros);
+        }
+        
+        
+    }
+    public static double dolarconvertido(Double pesos){
+        double dolar;
+        double peso = 0.000425;
+        
+        dolar = pesos*peso;
+        return dolar;
+        
+    }
+    public static double euroconvertido(Double pesos)
+    {
+        double euro;
+        double peso = 0.000378703497;
+        
+        euro = pesos*peso;
+        return euro;
+        
+    }
+}
+*--*-*-*-*-**-*-*-*-*
+
+
+package edad.vector;
+import java.util.Scanner;
+public class EdadVector {
+
+    public static void main(String[] args) {
+        Integer[] edades = new Integer[5];
+        Integer cont = 0;
+        Scanner tecla = new Scanner(System.in);
+        
+        while(cont < 5)
+        {
+            System.out.println("Digite la edad");
+            edades[cont] = tecla.nextInt();
+            cont = cont + 1;
+        }
+        cont =0;
+        
+        while(cont <5)
+        {
+            System.out.println(edades[cont]+",");
+            cont = cont + 1;
+        }
+    }
+    
+}
+
+-*-*-*-*-*-*-**-*-
+
+
+
+package ejemplo.pkgfor;
+import java.util.Scanner;
+
+public class EjemploFOR {
+   
+    public static void main(String[] args) {
+        Integer[] edades = new Integer[5];
+        Scanner lector = new Scanner(System.in);
+        Integer[] edadesx2 = new Integer[5];
+        
+        for(int n=0; n<=4; n++)
+        {
+            System.out.println("Digite la edad");
+            edades[n] = lector.nextInt();
+        }
+        edadesx2 = multivecpor2(edades);
+        for(int n=0; n<=4; n++){
+            System.out.println(edadesx2[n]+",");
+        }
+    }
+    public static Integer[] multivecpor2(Integer[] edades){
+        
+        for(int n=0; n<=4; n++)
+        {
+            edades[n]=edades[n]*2;
+        }
+        return edades;
+    }
+}
+-*-*-*-*-*-**-
+
+/*
+ Realizar en un programa java que le solicite al usuario 15 sueldos, estos sueldos se 
+almacenaran en un vector, y se debe determinar el promedio de los sueldos.
+ */
+package ejercicio.pkg1.vector;
+import java.util.*;
+public class Ejercicio1Vector {
+
+   
+    public static void main(String[] args) {
+        Integer sueldo;
+        Scanner
+    }
+    
+}
+-*-***-*-*-*-*-*-*
+
+
+package nomina;
+import java.util.Scanner;
+
+public class Nomina {
+
+   
+    public static void main(String[] args) {
+        Integer cantidad;
+        Integer sueldo;
+        Scanner lector = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de pantalones");
+        cantidad = lector.nextInt();
+        parametrospantalones(cantidad);
+        
+    }
+    public static void parametrospantalones(Integer cantidad)
+    {
+        Integer sueldo;
+        
+        if(cantidad < 10 )
+        {
+         sueldo = cantidad*4000;
+            System.out.println("El sueldo es de: "+sueldo);
+        }
+        if(cantidad > 10 && cantidad <25)
+        {
+            sueldo = cantidad * 6000;
+            System.out.println("El sueldo es de: "+sueldo);
+        }
+        if(cantidad > 25)
+        {
+            sueldo = cantidad*8000;
+            System.out.println("El sueldo es de: "+sueldo);
+        }   
+        
+    }
+}
+
+
