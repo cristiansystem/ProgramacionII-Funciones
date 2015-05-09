@@ -1,0 +1,44 @@
+package calculoimc;
+import java.util.*;
+public class CalculoIMC {
+
+    public static void main(String[] args) {
+        /* El main como funcion se encargada de capturar la informacion y de 
+        mostrarla. Esto se define asi de esta manera, como programador podemos 
+        distribuir la funcion o declararla como deseamos
+        */
+        double peso;
+        double altura;
+        double IMC;
+        Scanner lector = new Scanner(System.in);
+        
+        System.out.println("Digite la altura");
+        altura = lector.nextDouble();
+        System.out.println("Digite el peso");
+        peso = lector.nextDouble();
+        IMC = CalcularIMC(peso,altura);
+        determinarEstado(IMC);
+        
+    }
+    public static double CalcularIMC(double peso,double altura){
+        double IMCX;
+        IMCX=peso/(altura*altura);
+        return IMCX;
+        //return es el resultado final y lo que me devuelve la funcion
+    }
+    
+    public static void determinarEstado(double IMC){
+        if(IMC < 18.5){
+            System.out.println("Usted tiene bajo peso");
+        }
+        if(IMC >= 18.5 && IMC <= 24.9)
+        {
+            System.out.println("Usted tiene peso normal");
+            
+        }
+        if(IMC > 24.9)
+        {
+            System.out.println("Usted tiene sobrepeso");
+        }
+    }
+}
