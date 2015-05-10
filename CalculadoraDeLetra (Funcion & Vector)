@@ -1,0 +1,36 @@
+/*pedir al usuario 10 letras, estas letras se guardan en un vector, despues decir al 
+        usuario cuales de las letras con (a)*/
+
+package calculadora.de.letras.funcion;
+import java.util.*;
+
+public class CalculadoraDeLetrasFuncion {
+
+    
+    public static void main(String[] args) 
+    {
+        String[] letra = new String[10];
+        Scanner lector = new Scanner(System.in);
+        
+        
+         for(int n=0; n<10; n++)
+        {
+            System.out.println("Digite letra");
+            letra[n] = lector.next();
+        }
+        comparador(letra);
+        
+    }
+    public static void comparador(String[] letra)
+    {
+        Integer cont = 0;
+        for(int m=0;m<10;m++)
+        {
+            if(letra[m].compareTo("a")==0)
+            {
+                cont = cont + 1;
+            }
+        }
+        System.out.println("Hay "+cont+" (a)");
+    }
+}
