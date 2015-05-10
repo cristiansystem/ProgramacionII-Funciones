@@ -32,55 +32,7 @@ public class CalculadoraDeLetras {
 
  
     --------------------------
-    package convertidor.moneda;
-import java.util.*;
-public class ConvertidorMoneda {
-
-    
-    public static void main(String[] args) {
-        Double pesos;
-        Double dolares;
-        Double euros;
-        int opcion;
-        Scanner tecla = new Scanner(System.in);
-        
-        System.out.println("Ingrese la cantidad en pesos");
-        pesos = tecla.nextDouble();
-        System.out.println("- Presione (1) si desea convertir en dolares");
-        System.out.println("- Presione (2) si desea convertir en euros");
-        opcion = tecla.nextInt();
-        dolares = dolarconvertido(pesos);
-        euros = euroconvertido(pesos);
-        
-        if(opcion == 1)
-        {
-            System.out.println(pesos+"="+dolares);
-        }
-        if(opcion == 2)
-        {
-            System.out.println(pesos+"="+euros);
-        }
-        
-        
-    }
-    public static double dolarconvertido(Double pesos){
-        double dolar;
-        double peso = 0.000425;
-        
-        dolar = pesos*peso;
-        return dolar;
-        
-    }
-    public static double euroconvertido(Double pesos)
-    {
-        double euro;
-        double peso = 0.000378703497;
-        
-        euro = pesos*peso;
-        return euro;
-        
-    }
-}
+   
 *--*-*-*-*-**-*-*-*-*
 
 
