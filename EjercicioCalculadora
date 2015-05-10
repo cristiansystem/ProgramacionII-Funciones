@@ -36,31 +36,7 @@ public class CalculadoraDeLetras {
 *--*-*-*-*-**-*-*-*-*
 
 
-package edad.vector;
-import java.util.Scanner;
-public class EdadVector {
 
-    public static void main(String[] args) {
-        Integer[] edades = new Integer[5];
-        Integer cont = 0;
-        Scanner tecla = new Scanner(System.in);
-        
-        while(cont < 5)
-        {
-            System.out.println("Digite la edad");
-            edades[cont] = tecla.nextInt();
-            cont = cont + 1;
-        }
-        cont =0;
-        
-        while(cont <5)
-        {
-            System.out.println(edades[cont]+",");
-            cont = cont + 1;
-        }
-    }
-    
-}
 
 -*-*-*-*-*-*-**-*-
 
