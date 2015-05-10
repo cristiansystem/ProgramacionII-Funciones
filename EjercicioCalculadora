@@ -28,105 +28,11 @@ public class CalculadoraDeLetras {
 
 
 
-******s*das*s*ds*d
-
- 
-    --------------------------
-   
-*--*-*-*-*-**-*-*-*-*
 
 
 
 
--*-*-*-*-*-*-**-*-
 
 
-
-package ejemplo.pkgfor;
-import java.util.Scanner;
-
-public class EjemploFOR {
-   
-    public static void main(String[] args) {
-        Integer[] edades = new Integer[5];
-        Scanner lector = new Scanner(System.in);
-        Integer[] edadesx2 = new Integer[5];
-        
-        for(int n=0; n<=4; n++)
-        {
-            System.out.println("Digite la edad");
-            edades[n] = lector.nextInt();
-        }
-        edadesx2 = multivecpor2(edades);
-        for(int n=0; n<=4; n++){
-            System.out.println(edadesx2[n]+",");
-        }
-    }
-    public static Integer[] multivecpor2(Integer[] edades){
-        
-        for(int n=0; n<=4; n++)
-        {
-            edades[n]=edades[n]*2;
-        }
-        return edades;
-    }
-}
--*-*-*-*-*-**-
-
-/*
- Realizar en un programa java que le solicite al usuario 15 sueldos, estos sueldos se 
-almacenaran en un vector, y se debe determinar el promedio de los sueldos.
- */
-package ejercicio.pkg1.vector;
-import java.util.*;
-public class Ejercicio1Vector {
-
-   
-    public static void main(String[] args) {
-        Integer sueldo;
-        Scanner
-    }
-    
-}
--*-***-*-*-*-*-*-*
-
-
-package nomina;
-import java.util.Scanner;
-
-public class Nomina {
-
-   
-    public static void main(String[] args) {
-        Integer cantidad;
-        Integer sueldo;
-        Scanner lector = new Scanner(System.in);
-        System.out.println("Ingrese la cantidad de pantalones");
-        cantidad = lector.nextInt();
-        parametrospantalones(cantidad);
-        
-    }
-    public static void parametrospantalones(Integer cantidad)
-    {
-        Integer sueldo;
-        
-        if(cantidad < 10 )
-        {
-         sueldo = cantidad*4000;
-            System.out.println("El sueldo es de: "+sueldo);
-        }
-        if(cantidad > 10 && cantidad <25)
-        {
-            sueldo = cantidad * 6000;
-            System.out.println("El sueldo es de: "+sueldo);
-        }
-        if(cantidad > 25)
-        {
-            sueldo = cantidad*8000;
-            System.out.println("El sueldo es de: "+sueldo);
-        }   
-        
-    }
-}
 
 
