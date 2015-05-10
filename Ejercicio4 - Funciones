@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Program {
+    public static void main(String[] args) {
+       String contrasena;
+       
+       Scanner lector = new Scanner(System.in);
+       
+       
+       for(int n=0; n<5; n++)
+    {
+        System.out.println("Ingrese la contrasena");
+       contrasena = lector.nextLine();
+        verificador(contrasena);
+     }
+          
+  }
+     public static void verificador(String contrasena)
+   {
+        if(contrasena.compareTo("bochi123")==0)
+     {
+        System.out.println("Acceso concedido");
+         
+     }
+       else
+     {
+        System.out.println("Acceso Denegado");
+        
+     }          
+   }
+}
