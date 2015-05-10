@@ -1,0 +1,15 @@
+/*
+ Realizar en un programa java que le solicite al usuario 15 sueldos, estos sueldos se 
+almacenaran en un vector, y se debe determinar el promedio de los sueldos.
+ */
+package ejercicio.pkg1.vector;
+import java.util.*;
+public class Ejercicio1Vector {
+
+   
+    public static void main(String[] args) {
+        Integer sueldo;
+        Scanner
+    }
+    
+}
