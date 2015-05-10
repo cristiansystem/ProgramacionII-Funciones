@@ -1,0 +1,37 @@
+package nomina;
+import java.util.Scanner;
+
+public class Nomina {
+
+   
+    public static void main(String[] args) {
+        Integer cantidad;
+        Integer sueldo;
+        Scanner lector = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de pantalones");
+        cantidad = lector.nextInt();
+        parametrospantalones(cantidad);
+        
+    }
+    public static void parametrospantalones(Integer cantidad)
+    {
+        Integer sueldo;
+        
+        if(cantidad < 10 )
+        {
+         sueldo = cantidad*4000;
+            System.out.println("El sueldo es de: "+sueldo);
+        }
+        if(cantidad > 10 && cantidad <25)
+        {
+            sueldo = cantidad * 6000;
+            System.out.println("El sueldo es de: "+sueldo);
+        }
+        if(cantidad > 25)
+        {
+            sueldo = cantidad*8000;
+            System.out.println("El sueldo es de: "+sueldo);
+        }   
+        
+    }
+}
