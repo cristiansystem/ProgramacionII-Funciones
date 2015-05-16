@@ -1,0 +1,51 @@
+import java.util.*;
+public class Program {
+    public static void main(String[] args) {
+        String[] numero = new String[7];
+        Scanner lector = new Scanner(System.in);
+        
+        
+        for(int cont=0; cont<7; cont++)
+        {
+            System.out.println("Digite un numero del 1 - 7: ");
+            numero[cont] = lector.nextLine();
+        }
+        converdias(numero);
+    }
+    public static void converdias(String[] numero)
+    {
+        
+    for(int cont=0; cont<7; cont++)
+    {
+      if(numero[cont].equals("1"))
+          {
+               System.out.println("Lunes");
+          }
+        if(numero[cont].equals("2"))
+        {
+            System.out.println("Martes");
+        }
+        if(numero[cont].equals("3"))
+        {
+            System.out.println("Miercoles");
+        }
+        if(numero[cont].equals("4"))
+        {
+            System.out.println("Jueves");
+        }
+        if(numero[cont].equals("5"))
+        {
+            System.out.println("Viernes");
+        }
+        if(numero[cont].equals("6"))
+        {
+            System.out.println("Sabado");
+        }
+        if(numero[cont].equals("7"))
+        {
+            System.out.println("Domingo");
+        }
+    }
+        
+    }
+}
