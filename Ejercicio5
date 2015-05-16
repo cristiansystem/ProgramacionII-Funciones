@@ -1,0 +1,27 @@
+public class Program {
+    public static void main(String[] args) {
+        Double[] salarios = new Double[5];
+        Double suma = 0.0;
+        Double promedio = 0.0;
+        Scanner lector = new Scanner(System.in);
+        
+        for(int cont=0; cont<5; cont++)
+        {
+            System.out.println("Digite salario: ");
+            salarios[cont] = lector.nextDouble();
+        }
+        promedio = promedioSalario(salarios);
+        System.out.println("El promedio de salarios es: "+promedio);
+    }
+    public static Double promedioSalario(Double[] salarios)
+    {
+        Double suma=0.0;
+        Double prom=0.0;
+        for(int cont=0; cont<5; cont++)
+        {
+            suma=suma+salarios[cont];
+        }
+        prom = suma/5;
+        return prom;
+    }
+}
