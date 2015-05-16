@@ -1,0 +1,34 @@
+import java.util.*;
+public class Program {
+    public static void main(String[] args) {
+        String[] letras = new String[10];
+        String l;
+        Integer cantidad;
+        Scanner lector = new Scanner(System.in);
+        
+        
+        for(int cont=0; cont<10; cont++)
+        {
+            System.out.println("Digite letra: ");
+            letras[cont] = lector.next();
+        }
+        System.out.println("Ingrese letra a comprar: ");
+        l = lector.next();
+        cantidad = contarLetras(letras,l);
+        System.out.println("La ultima letra esta: "+cantidad+" veces.");
+        
+    }
+    public static Integer contarLetras(String[] letras, String l)
+    {
+        
+      Integer v=0;
+        for(int cont=0; cont<10; cont++)
+        {
+            if(letras[cont].equals(l))
+            {
+                v=v+1;
+            }
+        }
+        return v;
+    }
+}
