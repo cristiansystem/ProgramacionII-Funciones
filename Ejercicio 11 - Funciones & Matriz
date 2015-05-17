@@ -1,0 +1,57 @@
+import java.util.*;
+
+public class Program {
+    public static void main(String[] args)
+    {
+        Integer[][] matriz = new Integer[3][4];
+        Scanner tecla = new Scanner(System.in);
+        
+        for(int c=0; c<3; c++)
+        {
+            for(int m=0; m<4; m++)
+            {
+                System.out.println("Digite numero");
+                matriz[c][m] = tecla.nextInt();
+            }
+            
+        }
+        Positivos(matriz);
+        Negativos(matriz);
+    }
+    public static void Positivos(Integer[][] matriz)
+    {
+        Integer suma=0;
+        for(int f=0; f<3; f++)
+        {
+            for(int m=0; m<4; m++)
+            {
+                if(matriz[f][m]>0)
+                {
+                    suma = suma+1;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println("Hay "+suma+" Numeros Positivos");
+    }
+  
+    public static void Negativos(Integer[][] matriz)
+    {
+        Integer resta=0;
+        
+        for(int f=0; f<3; f++)
+        {
+            for(int m=0; m<4; m++)
+            {
+                if(matriz[f][m]<0)
+                {
+                    resta=resta+1;
+                }
+            }
+            
+        }
+        System.out.println();
+        System.out.println("Hay "+resta+" Numeros Negativos");
+    }
+}
