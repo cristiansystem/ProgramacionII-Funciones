@@ -1,0 +1,106 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package prueba;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author admin
+ */
+public class Prueba {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+     
+        String[][] arreglo=new String[3][3];
+        Scanner sc=new Scanner(System.in);
+        boolean ban=false;
+        String a;
+        
+        for(int f=0;f<3;f++){
+            for(int c=0;c<3;c++){
+                ban=false;
+                while(ban==false){
+                    System.out.println("Ingrese el digito");
+                    a=sc.next();
+                     if(Integer.parseInt(a)==1 || Integer.parseInt(a)==0){
+                    
+                    arreglo[f][c]=a;
+                    ban=true;
+                    }else{
+                    ban=false;   
+                    }
+                }
+            }        
+        }
+        
+        System.out.println("Ingrese la primera coordenada");
+        int d=sc.nextInt();
+        System.out.println("Ingrese la segunda coordenada");
+        int b=sc.nextInt();
+        String g=arreglo[d][b];
+        
+        arreglo[d][b]=Integer.toString(3);
+        int cero=0;
+        int uno=0;
+        
+        for(int f=0;f<3;f++){
+            for(int c=0;c<3;c++){
+            
+                if(Integer.parseInt(arreglo[f][c])==0){
+                    cero++;
+                }else{
+                    if(Integer.parseInt(arreglo[f][c])==1){
+                    uno++;
+                    }
+                        
+                    
+                }
+                
+                
+            }
+        }
+        
+        arreglo[d][b]=g;
+        
+        System.out.println("");
+        arreglo=matriz(arreglo);
+       
+        System.out.println("El numero de 1 en el arreglo es: "+ uno);
+        System.out.println("El numero de 0 en el arrelgo es: "+ cero);
+        System.out.println("");
+    
+  }
+    
+    
+    public static String[][] matriz(String[][]matriz){
+        
+        int f;
+        int c;
+        
+        for(f=0;f<matriz.length;f++){
+            for(c=0;c<matriz.length;c++){
+               
+                if(matriz[f][c]==null){
+                
+                    matriz[f][c]=" _ ";
+                    
+                }
+                System.out.print(matriz[f][c]);
+            }
+            System.out.println("");
+        }
+        
+        
+        
+        return matriz;
+    }
+  
+ 
+}
