@@ -21,11 +21,11 @@ public class ConvertidorMoneda {
         
         if(opcion == 1)
         {
-            System.out.println(pesos+"="+dolares);
+            System.out.println(pesos+" = "+" $ "+dolares);
         }
         if(opcion == 2)
         {
-            System.out.println(pesos+"="+euros);
+            System.out.println(pesos+" = "+" € "+euros);
         }
         
         
