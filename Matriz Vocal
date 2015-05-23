@@ -1,0 +1,42 @@
+{
+        String[][] matrizletra = new String[2][3];
+        Scanner lector = new Scanner(System.in);
+        
+        for(int f=0; f<2; f++)
+        {
+            for(int n=0; n<3; n++)
+            {
+                System.out.println("Ingrese la letra");
+                matrizletra[f][n] = lector.next();
+            }
+        }
+        System.out.println();
+        contarvocales(matrizletra);
+        
+        
+    }
+    
+    public static void contarvocales(String[][] matrizletra)
+    {
+        Integer contvocal = 0;
+        Integer contconsonantes = 0;
+        
+        for(int f=0; f<2; f++)
+        {
+            for(int n=0; n<3; n++)
+            {
+                if(matrizletra[f][n].equals("a") || matrizletra[f][n].equals("e") || matrizletra[f][n].equals("i") || matrizletra[f][n].equals("o") || matrizletra[f][n].equals("u") )
+                {
+                    contvocal = contvocal + 1;
+                }
+                else
+                {
+                    contconsonantes = contconsonantes + 1;
+                }
+                
+            }
+        }
+        System.out.println("Hay "+contvocal+" vocales ");
+        System.out.println("Hay "+contconsonantes+" consonantes ");
+    }
+    
