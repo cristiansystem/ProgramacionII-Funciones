@@ -1,0 +1,54 @@
+import java.util.*;
+public class Program {
+    public static void main(String[] args) {
+        String[][] matrilet = new String[5][5];
+        Scanner lector = new Scanner(System.in);
+        int jugar = 1;
+        Random rand = new Random();
+        String tecla;
+        int fo = 2;
+        int co = 2;
+        
+        for(int a=0; a<5; a++)
+        {
+            for(int b=0; b<5; b++)
+            {
+                matrilet[a][b] = " t ";
+                System.out.print(matrilet[a][b]+" @ ");
+                
+                while(jugar==1)
+                {
+                    System.out.println("  ");
+                    tecla = lector.next();
+                    if(tecla.equals("a"))
+                    {
+                        fo=fo-1;
+                        co=co;
+                    }
+                    
+                    if(tecla.equals("d"))
+                    {
+                        fo=fo+1;
+                        co=co;
+                    }
+                    if(tecla.equals("w"))
+                    {
+                        fo=fo;
+                        co=co-1;
+                    }
+                    if(tecla.equals("s"))
+                    {
+                        fo=fo;
+                        co=co+1;
+                    }
+                    System.out.println(matrilet[a][b]);
+                    System.out.println("Desea seguir jugando (1) si  o (0) no: ");
+                    jugar = lector.nextInt();
+                }
+            }
+             System.out.println(" ");
+        }
+        
+        
+    }
+}
